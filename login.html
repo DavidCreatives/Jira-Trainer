@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css" type="text/css"> 
+    <title>Jira Trainer Login</title>
+</head>
+<body>
+    <header>Jira Trainer 🦾</header>
+
+
+        <!-- Login Page-->
+        <section class="loginSection">
+            <h1>Login Page</h1>
+
+            <section class="loginForm">
+                <form onsubmit="handleLogin(); return false;">
+                    <label for="loginName">Username</label>
+                    <input type="text" id="loginName"/> <br>
+
+                    <label for="loginPassword">Password</label>
+                    <input type="password" name="loginPassword" id="loginPassword">
+
+                    <button type="button">Submit</button>
+                </form>
+            </section>
+        </section>
+        <!--Calculate User BMI -->
+
+        <section class="calculateUserSpecifics">
+            <h2>Enter The Following Information</h2>
+
+            <section class="userSpecificsForm">
+                <form>
+                    <label for="userMass">Your Mass in kilograms(Kg): </label>
+                    <input type="number" name="userMass" id="userMass" step="any"> <br>
+
+                    <label for="userHeight">Your Height in centimeters(cm): </label>
+                    <input type="number" name="userHeight" id="userHeight" step="">
+
+                    <button type="button" id="specificsForm">Submit</button>
+                </form>
+            </section>
+
+            <div id="displayBMI"></div>
+
+        </section>
+        
+        <!-- Search for Exercise Input -->
+        <hr>
+        <section class="exerciseSearch">
+            <label for="exerciseInput"> Enter an exercise region</label>
+            <input type="text" name="exerciseInput" id="exerciseInput">
+
+            <button>SEARCH</button>
+
+            <div class="exerciseOutput"></div>
+        </section>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
