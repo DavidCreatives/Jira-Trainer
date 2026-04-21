@@ -5,6 +5,8 @@ function handleLogin(){
     const userNameInput = document.getElementById('loginName')
     const userPassword = document.getElementById('loginPassword')
 }
+
+// Event listener to find out and display the BMI of the user.
 document.getElementById('specificsForm').addEventListener('click', function(){
         let userMass = document.getElementById('userMass').value
         let userHeight = document.getElementById('userHeight').value
@@ -66,7 +68,7 @@ async function getExerciseCategory() {
 
 async function getExerciseImage(imageId) {
     try{
-        const response = await fetch(`${wger_Base_Url}/exerciseimage/?language=2`,{
+        const response = await fetch(`${wger_Base_Url}/?language=2`,{
             method: 'GET',
             headers: {
                 'Authorization': `Token ${API_KEY}`,
@@ -75,19 +77,8 @@ async function getExerciseImage(imageId) {
         })
 
     const data = await response.json()
+    console.log(data)
     console.log('Exercises', data.results[0].image)
-
-    const body = document.body
-    
-    data.reults.forEach(element => {
-        const exerciseOutput = document.getElementById('exerciseOutput')
-        body.append(exerciseOutput)
-        const imgDiv = document.createElement('img')
-
-        imgDiv.src = data.results[element].image
-
-        body.append(imgDiv)
-    });
     
     }
     
